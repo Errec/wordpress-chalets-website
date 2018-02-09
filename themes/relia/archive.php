@@ -31,20 +31,20 @@ get_header();
                     <?php get_sidebar( 'left' ); ?>
 
                 <?php endif; ?>
-                
+
                 <div class="col-sm-<?php echo $width; ?>">
-                
+
                     <div class="row">
-                        
+
                         <div class="col-sm-12">
 
                             <h2 class="wow fadeInDown">
-                                
+
                                 <?php
                                     the_archive_title();
                                     the_archive_description( '<div class="taxonomy-description">', '</div>' );
                                 ?>
-                                
+
                             </h2>
 
                         </div>
@@ -67,7 +67,7 @@ get_header();
 
                                         <div class="blog-post-image" style="background-image: url(<?php echo has_post_thumbnail(get_the_ID()) ? $image[0] : $image; ?>);">
 
-                                        </div>   
+                                        </div>
 
                                         <div class="blog-post-overlay">
 
@@ -96,7 +96,7 @@ get_header();
                         <?php endif; ?>
 
                     </div>
-                    
+
                 </div>
 
                 <?php if ( is_active_sidebar('sidebar-right') ) : ?>
@@ -104,10 +104,10 @@ get_header();
                     <?php get_sidebar( 'right' ); ?>
 
                 <?php endif; ?>
-                
+
             </div> <!-- row -->
         </div> <!-- .container-fluid -->
     </main> <!-- #main -->
 </div> <!-- #primary -->
 
-<?php get_footer(); ?>      
+<?php get_footer(); ?>

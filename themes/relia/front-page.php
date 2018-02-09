@@ -10,16 +10,16 @@ get_header();
 
 <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
-        
+
         <?php $front = get_option('show_on_front'); ?>
-        
-        <?php if ( $front != 'posts' ) : 
+
+        <?php if ( $front != 'posts' ) :
             do_action( 'relia_jumbotron' );
-            do_action( 'relia_homepage' ); 
+            do_action( 'relia_homepage' );
         else :
              do_action( 'relia_jumbotron' );
         endif; ?>
-        
+
             <div class="container-fluid front-page-content">
 
                 <div class="row">
@@ -28,12 +28,12 @@ get_header();
 
                         <h2 class="wow fadeInDown feature-content-title">
 
-                            <?php if ( get_theme_mod( 'relia_homepage_content_title_toggle', 'show' ) == 'show' ) : ?>    
+                            <?php if ( get_theme_mod( 'relia_homepage_content_title_toggle', 'show' ) == 'show' ) : ?>
 
                                 <?php echo esc_attr( get_theme_mod( 'relia_homepage_content_title', __( 'Featured Content', 'relia' ) ) ); ?>
 
                             <?php endif; ?>
-                            
+
                         </h2>
 
                     </div>
@@ -73,7 +73,7 @@ get_header();
                                     <?php echo $front == 'posts' ? '</div>' : ''; ?>
 
                                     <?php if ($front == 'posts') : ?>
-                                
+
                                         <?php $paginate_links = paginate_links( array(
                                             'total' => $wp_query->max_num_pages,
                                         ) ); ?>
@@ -82,14 +82,14 @@ get_header();
 
                                             <div class="col-sm-4">
                                                 <div>
-                                                    <div class="pagination-links"> 
+                                                    <div class="pagination-links">
                                                         <?php echo $paginate_links; ?>
                                                     </div>
                                                 </div>
                                             </div>
 
                                         <?php endif; ?>
-                                
+
                                     <?php endif; ?>
 
                                 <?php else : ?>
@@ -101,12 +101,12 @@ get_header();
                             </div>
 
                         </div><!-- row -->
-                    </div><!-- container-->  
+                    </div><!-- container-->
                 </div> <!-- row -->
-            </div><!-- container-fluid -->    
-            
+            </div><!-- container-fluid -->
+
     </main><!-- #main -->
 </div><!-- #primary -->
 
 
-<?php get_footer(); ?>      
+<?php get_footer(); ?>

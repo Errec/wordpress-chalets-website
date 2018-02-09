@@ -9,3 +9,57 @@
 */
 
 @import url("../relia/style.css");
+
+/* 1 -- START - SHARED CONTENT */
+  .blog-roll-post div.blog-post-image {
+    filter: none;
+    -webkit-filter: none;
+  }
+
+  .footer {
+    display: none;
+  }
+/* 1 -- END - SHARED CONTENT */
+
+/* 2 -- START - CONTACT US */
+.entry-content {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+}
+#wpcf7-f24-p149-o1 {
+  margin-right: 23px;
+  width: 100%;
+}
+
+#wpcf7-f24-p149-o1 label {
+  width: 100%;
+}
+
+#wpcf7-f24-p149-o1 input {
+  width: 100%;
+}
+
+#wpcf7-f24-p149-o1 input[type="submit"] {
+  background-color: #CCAA66;
+  font-size: 12px;
+  font-weight: bold;
+  height: 30px;
+  text-transform: uppercase;
+  width: 200px;
+  transition: all 0.2s ease-in-out;
+}
+
+#wpcf7-f24-p149-o1 input[type="submit"]:hover {
+  color: #151515;
+}
+
+@media only screen and (max-width: 1000px) {
+  .entry-content {
+    flex-direction: column;
+  }
+}
+/* 2 -- END - CONTACT US */
